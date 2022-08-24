@@ -38,7 +38,8 @@ class AuthController extends Controller
                 ]
             ])->withCookie(cookie('jwt_token', $token, 60));
 
-    }
+    } 
+
 
     public function register(RegisterRequest $request){
       
@@ -81,7 +82,7 @@ class AuthController extends Controller
         ]);
     }
     public function deb(){
-        dd(Auth::user());
+        dd(Auth::user()->tasks());
     }
 
 }
