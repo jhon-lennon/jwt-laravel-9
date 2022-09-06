@@ -40,6 +40,7 @@ Route::prefix('user')->middleware('auth:api')->controller(UserController::class)
 
     Route::get('/', 'show');
     Route::post('/update', 'update');
+    Route::post('/create', 'create');
     Route::get('delete/', 'delete');
 
 });
